@@ -17,3 +17,18 @@ def test_report_strict_fails_on_defects(daily_csv, capsys):
 def test_realtime(realtime_json, capsys):
     assert main(["realtime", str(realtime_json)]) == 0
     assert json.loads(capsys.readouterr().out)["stations"] == 3.0
+
+
+def test_compare(capsys):
+    assert (
+        main(["compare", "fixtures/daily_weather_synthetic_long.csv", "--cutoff", "2017-01-01"])
+        == 0
+    )
+    out = capsys.readouterr().out
+    assert "persistence (baseline)" in out and "linear" in out
+
+
+def test_demo(capsys):
+    assert main(["demo"]) == 0
+    out = capsys.readouterr().out
+    assert "SYNTHETIC" in out and "[3]" in out

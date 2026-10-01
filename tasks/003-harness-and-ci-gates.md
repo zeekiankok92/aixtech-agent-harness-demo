@@ -10,4 +10,4 @@ allow-list) mirrored by `scripts/ci_local.sh`, and the docs/ evidence trail.
 ## Acceptance criteria
 - [x] `scripts/ci_local.sh` passes locally
 - [x] Disclosure log, review log, cycle-time TEMPLATE (no fabricated metrics), architecture diagram
-- [ ] Workflow observed green on GitHub. **Not done: the repo is not published yet (needs owner approval).**
+- [ ] Workflow observed green on GitHub. Publication approved by Anthony Zee on 2026-10-01. Still open until the first Actions run on GitHub is green.

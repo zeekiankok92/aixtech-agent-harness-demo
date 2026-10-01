@@ -48,5 +48,6 @@ data pipeline, a prototype that has to become real.*
 
 ## Terms (summary)
 Prices are in SGD and indicative until confirmed in a signed SOW. That SOW covers scope,
-acceptance tests, IP, liability cap, payment schedule and any GST.
+acceptance tests, IP, liability cap and payment schedule. The provider is not GST-registered,
+so no GST is charged on these prices.
 Contact via GitHub: [@zeekiankok92](https://github.com/zeekiankok92).

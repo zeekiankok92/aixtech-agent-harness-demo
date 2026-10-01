@@ -37,7 +37,9 @@ jobs:
         run: ruff format --check .
 
       - name: Gate 3 - tests with coverage threshold (90%)
-        run: pytest --cov-report=xml
+        run: |
+          pytest --cov-report=xml
+          python scripts/coverage_badge.py --check
 
       - name: Gate 4 - PDPA personal-data guard
         run: python scripts/check_pdpa.py

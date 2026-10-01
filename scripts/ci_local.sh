@@ -12,7 +12,8 @@ step() { printf '\n=== %s ===\n' "$1"; }
 
 step "1/6 ruff lint";            ruff check .
 step "2/6 ruff format check";    ruff format --check .
-step "3/6 pytest + coverage>=90"; pytest
+step "3/6 pytest + coverage>=90"; pytest --cov-report=xml
+python scripts/coverage_badge.py "${BADGE_MODE:-}"
 step "4/6 PDPA personal-data guard"; python scripts/check_pdpa.py
 step "5/6 secret scan (gitleaks)"
 if command -v "$GITLEAKS" >/dev/null 2>&1; then

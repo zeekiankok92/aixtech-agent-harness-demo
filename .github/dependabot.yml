@@ -1,0 +1,16 @@
+# Weekly dependency update PRs. Each one still has to pass all 6 gates and get human review.
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: weekly
+      timezone: Asia/Singapore
+    open-pull-requests-limit: 5
+    labels: [dependencies]
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      timezone: Asia/Singapore
+    labels: [dependencies]

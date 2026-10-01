@@ -15,6 +15,7 @@ git log --format='%h %ad %s%n   %(trailers:key=AI-Assisted,key=Human-Review,sepa
 | 2026-10-01 | `37a0e64` (harness + CI) | AGENTS.md, CLAUDE.md, templates, checklist, DoD, CI workflow, local CI script, PDPA guard, gitleaks config (task 003) | Grok Bot (AI coding agent) | Drafted all of it | Anthony Zee | Approved for publication - Anthony Zee, 2026-10-01 |
 | 2026-10-01 | docs commit (README + docs) | README, docs/, previews | Grok Bot (AI coding agent) | Drafted all of it | Anthony Zee | Approved for publication - Anthony Zee, 2026-10-01 |
 | 2026-10-01 | task 004 commit (models) | Climatology, rolling-mean and linear forecasters, `compare` and `demo` CLI commands, long synthetic fixture, tests | Grok Bot (AI coding agent) | Drafted all of it | Anthony Zee | Approved for publication - Anthony Zee, 2026-10-01 |
+| 2026-10-01 | repo-hygiene commit | Dependabot, CODEOWNERS, SECURITY.md, CONTRIBUTING.md, self-hosted coverage badge plus a CI staleness check | Grok Bot (AI coding agent) | Drafted all of it | Anthony Zee | Approved for publication - Anthony Zee, 2026-10-01 |
 
 **Status:** Anthony Zee approved these changes **for publication** on 2026-10-01.
 That approval covers publishing the repo. It is not a recorded line-by-line code

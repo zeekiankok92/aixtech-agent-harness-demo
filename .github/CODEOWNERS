@@ -1,0 +1,8 @@
+# A named human owns every path. AI agents may propose changes; owners approve them.
+*                       @zeekiankok92
+# Harness and gates: changes need explicit owner approval (see AGENTS.md section 1)
+/.github/               @zeekiankok92
+/AGENTS.md              @zeekiankok92
+/CLAUDE.md              @zeekiankok92
+/harness/               @zeekiankok92
+/scripts/               @zeekiankok92

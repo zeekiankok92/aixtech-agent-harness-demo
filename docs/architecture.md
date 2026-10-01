@@ -12,8 +12,11 @@ flowchart LR
     P --> Q["quality.py<br/>missing values, date gaps,<br/>duplicates, sanity rules"]
     P --> F["features.py<br/>tomorrow's max temp target,<br/>chronological split"]
     F --> B["baseline.py<br/>persistence forecast,<br/>MAE / RMSE"]
+    F --> MD["models.py<br/>climatology, rolling mean,<br/>linear regression"]
+    B --> MD
+    MD --> CLI
     API -. "injectable fetcher<br/>(tests: JSON fixture, no network)" .-> R["realtime.py<br/>stations + readings"]
-    Q --> CLI["cli.py<br/>python -m sgweather report / realtime"]
+    Q --> CLI["cli.py<br/>python -m sgweather<br/>report / compare / realtime / demo"]
     B --> CLI
     R --> CLI
 ```

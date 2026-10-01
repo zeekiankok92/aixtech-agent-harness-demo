@@ -12,3 +12,4 @@ dist/
 .env.*
 *.local.*
 reports/
+previews/github_*.png

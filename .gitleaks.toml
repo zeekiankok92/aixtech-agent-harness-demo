@@ -1,0 +1,7 @@
+# Use gitleaks' default ruleset; only the local virtualenv and caches are excluded.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "local tooling directories, never committed"
+paths = ['''^\.venv/''', '''\.ruff_cache/''', '''\.pytest_cache/''', '''\.egg-info/''']

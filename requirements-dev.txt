@@ -1,0 +1,5 @@
+# Dev / CI tooling only - the sgweather package itself has no runtime dependencies.
+ruff==0.16.9
+pytest==9.1.1
+pytest-cov==7.1.0
+pip-licenses==5.5.5

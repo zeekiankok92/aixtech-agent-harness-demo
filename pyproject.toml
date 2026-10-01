@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sgweather"
+version = "0.1.0"
+description = "Singapore weather starter used as the work product in an AI-agent harness demo"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Anthony Zee" }]
+requires-python = ">=3.10"
+dependencies = []  # runtime is stdlib-only on purpose
+
+[project.scripts]
+sgweather = "sgweather.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S106"]  # assert is how pytest works; dummy tokens are not secrets
+"scripts/make_fixtures.py" = ["S311"]  # seeded RNG for synthetic data, not crypto
+"src/sgweather/realtime.py" = ["S310"]  # fixed https URL, injectable fetcher
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q --cov=sgweather --cov-report=term-missing --cov-fail-under=90"
+
+[tool.coverage.run]
+branch = true
+source = ["sgweather"]
+omit = ["*/sgweather/__main__.py"]  # 3-line entry shim

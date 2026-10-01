@@ -1,0 +1,70 @@
+{
+  "code": 0,
+  "errorMsg": "",
+  "data": {
+    "stations": [
+      {
+        "id": "SYN01",
+        "deviceId": "SYN01",
+        "name": "Synthetic Station North",
+        "location": {
+          "latitude": 1.42,
+          "longitude": 103.82
+        }
+      },
+      {
+        "id": "SYN02",
+        "deviceId": "SYN02",
+        "name": "Synthetic Station East",
+        "location": {
+          "latitude": 1.35,
+          "longitude": 103.98
+        }
+      },
+      {
+        "id": "SYN03",
+        "deviceId": "SYN03",
+        "name": "Synthetic Station West",
+        "location": {
+          "latitude": 1.33,
+          "longitude": 103.7
+        }
+      }
+    ],
+    "readings": [
+      {
+        "timestamp": "2026-01-15T14:00:00+08:00",
+        "data": [
+          {
+            "stationId": "SYN01",
+            "value": 31.2
+          },
+          {
+            "stationId": "SYN02",
+            "value": 30.4
+          },
+          {
+            "stationId": "SYN03",
+            "value": 32.0
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-01-15T14:01:00+08:00",
+        "data": [
+          {
+            "stationId": "SYN01",
+            "value": 31.3
+          },
+          {
+            "stationId": "SYN02",
+            "value": 30.5
+          }
+        ]
+      }
+    ],
+    "readingType": "DBT 1M F",
+    "readingUnit": "deg C"
+  },
+  "_note": "SYNTHETIC fixture - invented values in the public API's shape."
+}
